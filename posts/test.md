@@ -3,6 +3,7 @@ title: "Next.js page options and how they work"
 metaTitle: "Next.js page options and how they work"
 metaDesc: "How to use pages in Next.js exploring the options"
 socialImage: images/code.jpeg
+popularity: 1
 date: "2022-03-24"
 summary: "This is the summary of blabla. This can do API calls while we await it. And we can then return them as props.These props are passed to our primary function (Shows)."
 tags:
