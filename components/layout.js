@@ -8,14 +8,11 @@ export default function Layout({ children }) {
           <Link href='/'>
             <a>🏡</a>
           </Link>
-          <p className='mx-auto text-xl font-title font-bold text-grey-text py-3'>A  FULL  STACK  DEVELOPER  JOURNEY</p>{' '}
+          <p className='mx-auto text-sm w-1/2 text-center md:text-xl lg:text-xl font-title font-bold text-grey-text py-3'>A  FULL  STACK  DEVELOPER  JOURNEY</p>{' '}
         </div>
       </header>
       <main className='container mx-auto flex-1'>{children}</main>
-      <footer className='bg-indigo-500 mt-8 py-4'>
-        <div className='container mx-auto flex justify-center'>
-          &copy; 2022 DailyDevTips
-        </div>
+      <footer className='bg-grey-body mt-8 py-4'>
       </footer>
     </div>
   );

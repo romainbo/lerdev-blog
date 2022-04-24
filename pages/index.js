@@ -15,32 +15,39 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  console.log(posts)
-  console.log(posts.posts[0].slug)
   const mostPopularPosts = [...posts.posts].sort((a, b) => b.frontmatter.popularity - a.frontmatter.popularity).slice(0,2)
   return (
     <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 p-4 md:p-0 mt-5  '>
         <div
-          // key={slug}
-          className='m-2 flex'
+          className='m-2 flex flex-col justify-center lg:flex-row'
         >
             <TextHalfScreen post={posts.posts[0]}>
             </TextHalfScreen>
             <Link href={`/post/${posts.posts[0].slug}`}>
-              <a>
+              <a className='-order-1 flex justify-center  lg:order-1 lg:w-2/5 '>
                 <Image
                   width={650}
                   height={340}
                   alt={posts.posts[0].frontmatter.title}
                   src={`/${posts.posts[0].frontmatter.socialImage}`}
+                  objectFit={`cover`}
+                  className="w-9/12"
                 />
               </a>
           </Link>
         </div>
-        <hr className='mt-20 border-1 border-dashed border-grey-text'></hr>
+        <hr className='mt-10 lg:mt-20 border-1 border-dashed border-grey-text'></hr>
         <TwoArticles posts={mostPopularPosts}>
         </TwoArticles>
-        <hr className='mt-20 border-1 border-dashed border-grey-text'></hr>
+        <hr className='mt-10 lg:mt-20  border-1 border-dashed border-grey-text'></hr>
+        <div className='mt-20'>
+          <Image
+            width={650}
+            height={340}
+            alt={posts.posts[0].frontmatter.title}
+            src={`/${posts.posts[0].frontmatter.socialImage}`}
+          />
+        </div>
     </div>
   );
 }

@@ -12,6 +12,9 @@ module.exports = {
         'grey-title': '#2a2e35',
         'grey-text': '#b2becd',
         'grey-body': '#12181b'
+      },
+      spacing: {
+        '650': '650px',
       }
   }
     
