@@ -1,3 +1,28 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.prose {
+  font-family: "Nunito Sans", "sans-serif";
+}
+
+.prose code,
+.prose a,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: white;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: "Rubik", "sans-serif";
+  font-weight: 600;
+}
