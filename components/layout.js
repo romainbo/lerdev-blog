@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <header className='bg-grey-title mb-8 py-4'>
         <div className='container mx-auto flex justify-center'>
           <Link href='/'>
-            <a>🏡</a>
+            <a>LERDEV</a>
           </Link>
           <p className='mx-auto text-sm w-1/2 text-center md:text-xl lg:text-xl font-title font-bold text-grey-text py-3'>A  FULL  STACK  DEVELOPER  JOURNEY</p>{' '}
         </div>
