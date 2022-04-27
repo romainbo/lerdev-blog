@@ -39,6 +39,11 @@ export default function Home({ posts }) {
         <hr className='mt-10 lg:mt-20 border-1 border-dashed border-grey-text'></hr>
         <TwoArticles posts={mostPopularPosts}>
         </TwoArticles>
+        <div className='flex content-center items-center justify-center'>
+          <Link href={`/posts`}> 
+            <a className="border-green-400 border-2 text-grey-text font-body uppercase py-4 px-8 rounded-sm text-l mt-4 hover:bg-green-400 hover:text-white ">Show more</a>
+          </Link>
+        </div>
         <hr className='mt-10 lg:mt-20  border-1 border-dashed border-grey-text'></hr>
         <div className='mt-20'>
           <Image

@@ -2,17 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function twoArticles({ posts }) {
-  console.log(posts);
-  console.log(posts[0].frontmatter.tags);
-  //const mostPopulars = [...posts.posts];
-  //mostPopulars.sort((a, b) => b.frontmatter.popularity - a.frontmatter.popularity).slice(0,2);
-  
-  
-  //console.log("after sort : ", posts.map(a => { a.slug, a.frontmatter }));
   return (
     <div>
-      <h2 className='text-white font-title uppercase text-3xl mb-7 text-center mt-20 '>most popular</h2>
-      <div className='flex-1 flex flex-col lg:flex-row justify-center align-center '>
+      <h2 className='text-white font-title uppercase text-3xl mb-7 text-center mt-20 '>{posts.length > 2 ? 'all posts' : 'most popular' }</h2>
+      <div className='flex-1 flex flex-col lg:flex-row justify-center align-center flex-wrap'>
             {posts.map(function(post) {
             return <div
               key={post.slug}
