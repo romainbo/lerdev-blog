@@ -12,7 +12,9 @@ export default function Layout({ children }) {
         </div>
       </header>
       <main className='container mx-auto flex-1'>{children}</main>
-      <footer className='bg-grey-body mt-8 py-4'>
+      <footer className='bg-grey-body mt-8 py-4 flex flex-col items-center'>
+        <p className='text-grey-text font-body mb-10 text-xl w-1/2 text-center'>Created with React, Nextjs and Nodejs by Lerdev (github link)</p>
+        <p className='text-grey-text font-body mb-10 text-xl w-1/2 text-center'>You can follow us on twitter (twitter link)</p>
       </footer>
     </div>
   );

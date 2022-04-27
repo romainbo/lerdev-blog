@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import TextHalfScreen from '../components/textHalfScreen'
 import TwoArticles from '../components/twoArticles'
+import YourHosts from '../components/yourHosts'
 import { getSortedPostsData } from '../lib/allPosts'
 
 export async function getStaticProps() {
@@ -45,14 +46,9 @@ export default function Home({ posts }) {
           </Link>
         </div>
         <hr className='mt-10 lg:mt-20  border-1 border-dashed border-grey-text'></hr>
-        <div className='mt-20'>
-          <Image
-            width={650}
-            height={340}
-            alt={posts.posts[0].frontmatter.title}
-            src={`/${posts.posts[0].frontmatter.socialImage}`}
-          />
-        </div>
+          <YourHosts>
+          </YourHosts>
+        <hr className='mt-10 lg:mt-20  border-1 border-dashed border-grey-text'></hr>
     </div>
   );
 }
